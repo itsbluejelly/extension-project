@@ -1,24 +1,37 @@
-body {
+*{
     margin: 0;
-    padding: 10px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button,input{
+    font-size: inherit;
+}
+
+html{
+    font-size: clamp(1rem, 1.5vh, 2rem);
     font-family: Arial, Helvetica, sans-serif;
-    width: 50%;
+}
+
+body{
+    padding: 10px;
+    width: 75%;
 }
 
 input{
     width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #5f9341;
-    margin-bottom: 4px;
+    border: 2px solid darkgreen;
+    border-radius: 7px;
+    margin-bottom: 6px;
+    padding-left: 5px;
 }
 
-button {
-    background: #5f9341;
-    color: white;
-    padding: 10px 20px;
-    border: none;
+button{
     font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    padding: 5px;
 }
 
 ul {
@@ -31,6 +44,74 @@ li {
     margin-top: 5px;
 }
 
-a {
-    color: #5f9341;
+a{
+    color: darkgreen;
+}
+
+#save-btn{
+    background-color: lightgreen;
+}
+
+#delete-btn{
+    background-color: red;
+}
+
+#tab-btn{
+    background-color: orange;
+}
+
+@media  screen and (max-width : 77px) {
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+
+    button{
+        color: transparent;
+    }
+    
+}
+
+@media (prefers-color-scheme: dark) {
+    body{
+        background-color: rgba(0, 0, 0, 0.884);
+    }
+
+    input{
+        border-color: green;
+    }
+
+    button{
+        color: white;
+    }
+
+    a{
+        color: lightgreen;
+    }
+
+    #save-btn{
+        background-color: green;
+    }
+    
+    #delete-btn{
+        background-color: darkred;
+    }
+    
+    #tab-btn{
+        background-color: darkorange;
+    }
+
+    @media  screen and (max-width : 77px) {
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+    
+        button{
+            color: transparent;
+        }
+        
+    }
+    
+    
 }
