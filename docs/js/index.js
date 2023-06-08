@@ -46,10 +46,10 @@ deleteBtn.addEventListener("dblclick", () => {
 })
 
 // ACTION TO SAVE TAB VISITED
-tabBtn.addEventListener("click", () => {
+tabBtn.addEventListener("click", function(){    
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-        inputList.push(tabs[0].url);
-        localStorage.setItem("storedlist", JSON.stringify(inputList));
+        inputList.push(tabs[0].url)
+        localStorage.setItem("storedlist", JSON.stringify(inputList) )
         showItems(inputList)
     })
 })
