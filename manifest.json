@@ -1,7 +1,8 @@
 {
     "manifest_version": 3,
     "version": "1.1",
-    "name": "Leads tracker",
+    "name": "Site tracker",
+    "description": "The extension helps keep tabs on links and tabs",
     "action": {
         "default_popup": "/docs/index.html",
         "default_icon": "/docs/img/icon.png"
